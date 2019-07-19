@@ -12,6 +12,7 @@
 /build
 /lib
 /dist
+bundle-stats.html
 
 # misc
 .env.local
