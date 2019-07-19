@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "react-hooks", "jsx-a11y", "import"],
+  "rules": {
+    "react/jsx-filename-extension": ["off"],
+    "import/no-named-as-default-member": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/forbid-prop-types": ["off"],
+    "no-return-assign": ["off"],
+    "class-methods-use-this": ["off"],
+    "semi": ["off", "never"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "navigator": false
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  }
+}

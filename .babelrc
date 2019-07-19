@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-flow", "airbnb"],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  },
+  "plugins": ["babel-plugin-styled-components", "@babel/transform-flow-strip-types"]
+}
