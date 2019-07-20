@@ -21,7 +21,8 @@ export default {
       medium: pxToRem(14),
       small: pxToRem(12)
     },
-    a: pxToRem(14),
+    link: pxToRem(14),
+    button: pxToRem(14),
     label: pxToRem(14),
     input: pxToRem(14)
   },
@@ -37,7 +38,8 @@ export default {
       medium: pxToRem(20),
       small: pxToRem(18)
     },
-    a: pxToRem(14),
+    link: pxToRem(14),
+    button: pxToRem(14),
     label: pxToRem(22)
   }
 };

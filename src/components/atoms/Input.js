@@ -63,7 +63,7 @@ type Props = {
 
 const Input = ({ id, label, ...props }: Props) => {
   return (
-    <Label for={id}>
+    <Label htmlFor={id}>
       {label}
       <StyledInput name={id} id={id} {...props} />
     </Label>

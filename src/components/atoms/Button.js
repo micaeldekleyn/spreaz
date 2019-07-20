@@ -18,15 +18,15 @@ const StyledButton = styled.button`
   font-size: ${({ theme }) =>
     theming({
       theme: theme,
-      path: "FontSizes.a",
-      defaultValue: FontSizes.a
+      path: "FontSizes.button",
+      defaultValue: FontSizes.button
     })};
   font-weight: bold;
   line-height: ${({ theme }) =>
     theming({
       theme: theme,
-      path: "LineHeights.a",
-      defaultValue: LineHeights.a
+      path: "LineHeights.button",
+      defaultValue: LineHeights.button
     })};
   color: ${({ theme }) =>
     theming({
@@ -171,12 +171,44 @@ const StyledButton = styled.button`
       );
     }
   }
+
+  :active {
+    color: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.NeutralLight",
+        defaultValue: Colors.NeutralLight
+      })};
+    background: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })};
+    :before {
+      background: linear-gradient(
+        90deg,
+        ${({ theme }) =>
+          theming({
+            theme: theme,
+            path: "Colors.Secondary",
+            defaultValue: Colors.Secondary
+          })} 0%,
+      ${({ theme }) =>
+        theming({
+          theme: theme,
+          path: "Colors.Secondary",
+          defaultValue: Colors.Secondary
+        })} 100%
+      );
+    }
+  }
 `;
 
-export const SubmitButton = props => {
+export const SubmitButton = (props: Object) => {
   return <StyledButton type="submit" {...props} />;
 };
 
-export const Button = props => {
+export const Button = (props: Object) => {
   return <StyledButton as="a" {...props} />;
 };

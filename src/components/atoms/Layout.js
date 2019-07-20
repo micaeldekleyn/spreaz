@@ -36,14 +36,6 @@ const StyledCol = styled.div`
   padding: 0;
   box-sizing: border-box;
   background-clip: content-box;
-
-  /* :first-child {
-    padding-left: 0;
-  }
-
-  :last-child {
-    padding-right: 0;
-  } */
 `;
 
 type Props = {
