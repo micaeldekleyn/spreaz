@@ -55,3 +55,16 @@ storiesOf("Layout", module).add("All", () => (
     </Row>
   </div>
 ));
+
+storiesOf("Layout", module).add("Full Height", () => (
+  <div style={{ overflowX: "hidden" }}>
+    <Row fullHeight style={{ backgroundColor: "#F7F7F7" }}>
+      <Col span={8} style={{ backgroundColor: "#21D4FD" }}>
+        <p style={{ padding: "8px" }}>Column 8</p>
+      </Col>
+      <Col span={8} style={{ backgroundColor: "#B4DEFF" }}>
+        <p style={{ padding: "8px" }}>Column 8</p>
+      </Col>
+    </Row>
+  </div>
+));
