@@ -17,6 +17,12 @@ const Row = styled.div`
       margin-left: -${Layout.Gutters / 2}px;
       margin-right: -${Layout.Gutters / 2}px;
     `}
+
+  ${({ fullHeight }) =>
+    fullHeight &&
+    css`
+      height: 100vh;
+    `}
 `;
 
 const StyledCol = styled.div`
