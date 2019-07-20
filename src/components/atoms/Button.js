@@ -171,6 +171,38 @@ const StyledButton = styled.button`
       );
     }
   }
+
+  :active {
+    color: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.NeutralLight",
+        defaultValue: Colors.NeutralLight
+      })};
+    background: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })};
+    :before {
+      background: linear-gradient(
+        90deg,
+        ${({ theme }) =>
+          theming({
+            theme: theme,
+            path: "Colors.Secondary",
+            defaultValue: Colors.Secondary
+          })} 0%,
+      ${({ theme }) =>
+        theming({
+          theme: theme,
+          path: "Colors.Secondary",
+          defaultValue: Colors.Secondary
+        })} 100%
+      );
+    }
+  }
 `;
 
 export const SubmitButton = props => {
