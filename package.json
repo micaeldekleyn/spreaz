@@ -1,8 +1,9 @@
 {
   "name": "spreaz",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Spreaz is UI design language with React implementation.",
   "main": "lib/index.js",
+  "files":["lib"],
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
