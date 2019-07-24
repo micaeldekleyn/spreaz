@@ -58,16 +58,21 @@ const StyledInput = styled.input`
 
 type Props = {
   id: string,
+  className?: string,
   label: string
 };
 
-const Input = ({ id, label, ...props }: Props) => {
+const Input = ({ id, label, className, ...props }: Props) => {
   return (
-    <Label htmlFor={id}>
+    <Label htmlFor={id} className={className}>
       {label}
       <StyledInput name={id} id={id} {...props} />
     </Label>
   );
+};
+
+Input.defaultProps = {
+  className: undefined
 };
 
 export { Input };
