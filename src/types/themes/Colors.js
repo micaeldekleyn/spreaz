@@ -5,5 +5,6 @@ export type ColorsTypes = {
   NeutralLight: string,
   NeutralDark: string,
   Primary: string,
-  Secondary: string
+  Secondary: string,
+  Error: string
 };

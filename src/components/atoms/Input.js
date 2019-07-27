@@ -3,6 +3,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Colors, FontFamilies, FontSizes, LineHeights } from "../../themes";
+import { TextError } from "./Text";
 import { theming } from "../../utils/theming";
 
 const Label = styled.label`
@@ -40,6 +41,12 @@ const StyledInput = styled.input`
   outline: none;
   box-sizing: border-box;
 
+  ${({ error }) =>
+    error &&
+    css`
+      border-color: ${Colors.Error};
+    `}
+
   ${({ round }) =>
     round &&
     css`
@@ -59,20 +66,29 @@ const StyledInput = styled.input`
 type Props = {
   id: string,
   className?: string,
-  label: string
+  label: string,
+  error?: string
 };
 
-const Input = ({ id, label, className, ...props }: Props) => {
+const Input = ({ id, label, className, error, ...props }: Props) => {
+  console.log(error);
   return (
     <Label htmlFor={id} className={className}>
       {label}
-      <StyledInput name={id} id={id} {...props} />
+      <TextError style={{ marginLeft: "4px" }}>{error}</TextError>
+      <StyledInput
+        name={id}
+        id={id}
+        {...props}
+        error={error !== undefined ? true : false}
+      />
     </Label>
   );
 };
 
 Input.defaultProps = {
-  className: undefined
+  className: undefined,
+  error: undefined
 };
 
 export { Input };

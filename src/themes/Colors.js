@@ -7,7 +7,8 @@ const Colors: ColorsTypes = {
   NeutralLight: "#FFFFFF",
   NeutralDark: "#282A2D",
   Primary: "#21D4FD",
-  Secondary: "#B721FF"
+  Secondary: "#B721FF",
+  Error: "#f53b57"
 };
 
 export default Colors;
