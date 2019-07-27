@@ -4,7 +4,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import { Title } from "../src/components/atoms/Title";
-import { Text } from "../src/components/atoms/Text";
+import { Text, TextError } from "../src/components/atoms/Text";
 
 storiesOf("Typography", module).add("All", () => (
   <div>
@@ -24,5 +24,6 @@ storiesOf("Typography", module).add("All", () => (
     <Text level="small" bold>
       12 Text Bold
     </Text>
+    <TextError>12 Text Error</TextError>
   </div>
 ));

@@ -24,7 +24,8 @@ export default {
     link: pxToRem(14),
     button: pxToRem(14),
     label: pxToRem(14),
-    input: pxToRem(14)
+    input: pxToRem(14),
+    textError: pxToRem(12)
   },
   LineHeights: {
     h1: pxToRem(40),
@@ -40,6 +41,7 @@ export default {
     },
     link: pxToRem(14),
     button: pxToRem(14),
-    label: pxToRem(22)
+    label: pxToRem(22),
+    textError: pxToRem(12)
   }
 };
