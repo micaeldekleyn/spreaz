@@ -71,7 +71,7 @@ type Props = {
 };
 
 const Input = ({ id, label, className, error, ...props }: Props) => {
-  console.log(error);
+  console.log("spreaz error", error);
   return (
     <Label htmlFor={id} className={className}>
       {label}
