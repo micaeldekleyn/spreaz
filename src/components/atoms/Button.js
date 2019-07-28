@@ -36,6 +36,7 @@ const StyledButton = styled.button`
     })};
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   background: ${({ theme }) =>
     theming({
       theme: theme,
