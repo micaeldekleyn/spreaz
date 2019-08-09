@@ -1,14 +1,14 @@
 // @flow
 
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { theming } from "../../utils/theming";
 import { Colors } from "../../themes";
 
 const LeftMenuContainer = styled.nav`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 100%;
   height: 100vh;
   padding: 16px 0;
   background-color: ${({ theme }) =>
