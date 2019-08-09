@@ -1,8 +1,9 @@
 // @flow
 
 import React from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from "@storybook/react";
-import { Link } from "../src/components/atoms/Link";
+import { Link, MenuLink } from "../src/components/atoms/Link";
 
 storiesOf("Links", module).add("All", () => (
   <div>
@@ -13,6 +14,10 @@ storiesOf("Links", module).add("All", () => (
       <Link href="/?path=/story/links--all" cancel>
         Cancel style
       </Link>
+    </div>
+    <div>
+      <MenuLink>Menu Link</MenuLink>
+      <MenuLink className="active">Menu Link Active</MenuLink>
     </div>
   </div>
 ));
