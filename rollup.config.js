@@ -1,6 +1,7 @@
 import babel from "rollup-plugin-babel";
 import { uglify } from "rollup-plugin-uglify";
 import visualizer from "rollup-plugin-visualizer";
+import image from "@timdp/rollup-plugin-image";
 import resolve from "rollup-plugin-node-resolve";
 
 const globals = {
@@ -11,7 +12,7 @@ const globals = {
 };
 const name = "spreaz";
 
-const plugins = [babel(), resolve()];
+const plugins = [image(), babel(), resolve()];
 
 const base = {
   input: "src/index.js",

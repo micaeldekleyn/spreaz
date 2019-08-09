@@ -70,21 +70,18 @@ type Props = {
   error?: string
 };
 
-const Input = ({ id, label, className, error, ...props }: Props) => {
-  console.log("spreaz error", error);
-  return (
-    <Label htmlFor={id} className={className}>
-      {label}
-      <TextError style={{ marginLeft: "4px" }}>{error}</TextError>
-      <StyledInput
-        name={id}
-        id={id}
-        {...props}
-        error={error !== undefined ? true : false}
-      />
-    </Label>
-  );
-};
+const Input = ({ id, label, className, error, ...props }: Props) => (
+  <Label htmlFor={id} className={className}>
+    {label}
+    <TextError style={{ marginLeft: "4px" }}>{error}</TextError>
+    <StyledInput
+      name={id}
+      id={id}
+      {...props}
+      error={error !== undefined ? true : false}
+    />
+  </Label>
+);
 
 Input.defaultProps = {
   className: undefined,

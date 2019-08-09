@@ -1,6 +1,6 @@
 {
   "name": "spreaz",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Spreaz is UI design language with React implementation.",
   "main": "lib/index.js",
   "files": [
@@ -38,6 +38,7 @@
     "@storybook/addon-viewport": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@timdp/rollup-plugin-image": "^1.0.3",
     "babel-eslint": "10.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.12.0",
