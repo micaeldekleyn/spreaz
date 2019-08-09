@@ -59,9 +59,10 @@ const LeftMenu = ({
   appName,
   leftLinks,
   rightContentTitle,
-  rightLinks
+  rightLinks,
+  ...props
 }: Props) => (
-  <StyledLeftMenu as={LeftMenuContainer}>
+  <StyledLeftMenu {...props} as={LeftMenuContainer}>
     <LeftMenuHeaderContainer className="LeftMenu__HeaderContainer">
       <Title level="h2" as="h1">
         <a href="/" className="LeftMenu__AppNameLink">
