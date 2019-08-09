@@ -213,3 +213,148 @@ export const SubmitButton = (props: Object) => {
 export const Button = (props: Object) => {
   return <StyledButton as="a" {...props} />;
 };
+
+export const StyledRoundButton = styled.a`
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  color: ${({ theme }) =>
+    theming({
+      theme: theme,
+      path: "Colors.Primary",
+      defaultValue: Colors.Primary
+    })};
+  background: ${({ theme }) =>
+    theming({
+      theme: theme,
+      path: "Colors.NeutralLight",
+      defaultValue: Colors.NeutralLight
+    })};
+  margin: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: ${({ theme }) =>
+    theming({
+      theme: theme,
+      path: "FontFamilies.Primary",
+      defaultValue: FontFamilies.Primary
+    })};
+  font-size: ${({ theme }) =>
+    theming({
+      theme: theme,
+      path: "FontSizes.button",
+      defaultValue: FontSizes.button
+    })};
+  font-weight: bold;
+  line-height: 42px;
+  cursor: pointer;
+
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      ${({ theme }) =>
+          theming({
+            theme: theme,
+            path: "Colors.Primary",
+            defaultValue: Colors.Primary
+          })}
+        0%,
+      ${({ theme }) =>
+          theming({
+            theme: theme,
+            path: "Colors.Secondary",
+            defaultValue: Colors.Secondary
+          })}
+        100%
+    );
+  }
+
+  :hover {
+    color: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.NeutralLight",
+        defaultValue: Colors.NeutralLight
+      })};
+    background: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })};
+    :before {
+      background: linear-gradient(
+        90deg,
+        ${({ theme }) =>
+            theming({
+              theme: theme,
+              path: "Colors.Primary",
+              defaultValue: Colors.Primary
+            })}
+          0%,
+        ${({ theme }) =>
+            theming({
+              theme: theme,
+              path: "Colors.Primary",
+              defaultValue: Colors.Primary
+            })}
+          100%
+      );
+    }
+  }
+
+  :active {
+    color: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.NeutralLight",
+        defaultValue: Colors.NeutralLight
+      })};
+    background: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })};
+    :before {
+      background: linear-gradient(
+        90deg,
+        ${({ theme }) =>
+            theming({
+              theme: theme,
+              path: "Colors.Secondary",
+              defaultValue: Colors.Secondary
+            })}
+          0%,
+        ${({ theme }) =>
+            theming({
+              theme: theme,
+              path: "Colors.Secondary",
+              defaultValue: Colors.Secondary
+            })}
+          100%
+      );
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+`;

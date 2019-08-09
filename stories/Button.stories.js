@@ -1,10 +1,12 @@
 // @flow
 
 import React from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import { Row, Col } from "../src/components/atoms/Layout";
 import { Button, SubmitButton } from "../src/components/atoms/Button";
+import RoundButton from "../src/components/molecules/buttons/RoundButton";
 
 storiesOf("Buttons", module).add("All", () => (
   <div>
@@ -37,6 +39,9 @@ storiesOf("Buttons", module).add("All", () => (
       <Col span={8}>
         <SubmitButton border>Form submit button rounded</SubmitButton>
       </Col>
+    </Row>
+    <Row style={{ marginTop: "16px" }}>
+      <RoundButton href="/" text="TT" />
     </Row>
   </div>
 ));
