@@ -1,7 +1,7 @@
 import babel from "rollup-plugin-babel";
 import { uglify } from "rollup-plugin-uglify";
 import visualizer from "rollup-plugin-visualizer";
-import image from "@timdp/rollup-plugin-image";
+import image from "rollup-plugin-img";
 import resolve from "rollup-plugin-node-resolve";
 
 const globals = {
