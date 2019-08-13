@@ -11,7 +11,7 @@ storiesOf("Page Header", module).add("Page Header", () => (
     title="Events"
     buttons={[
       <Button key={1}>Link button</Button>,
-      <Button key={2}>Link button</Button>
+      <Button key={2}>Link button 2</Button>
     ]}
   />
 ));
