@@ -66,10 +66,17 @@ const LeftMenuRightContent = styled.div`
   padding: 0 16px;
 `;
 
+const PageHeaderContainer = styled.header`
+  flex: 1;
+  background-color: ${Colors.NeutralLight};
+  border-bottom: 1px solid ${Colors.Neutral};
+`;
+
 export {
   LeftMenuContainer,
   LeftMenuHeaderContainer,
   LeftMenuContentContainer,
   LeftMenuLeftContent,
-  LeftMenuRightContent
+  LeftMenuRightContent,
+  PageHeaderContainer
 };
