@@ -92,6 +92,12 @@ const MenuLink = styled.a`
   cursor: pointer;
 
   &:hover {
+    color: ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })};
     background-color: ${({ theme }) =>
       theming({
         theme: theme,
