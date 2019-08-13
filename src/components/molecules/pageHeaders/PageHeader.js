@@ -27,6 +27,7 @@ const StyledPageHeader = styled.header`
       display: flex;
       flex: 1;
       flex-direction: row;
+      justify-content: flex-end;
 
       & > * {
         margin-left: 16px;
