@@ -105,8 +105,10 @@ const MenuLink = styled.a`
         defaultValue: Colors.Primary
       })}15;
   }
-  
-  &.active {
+
+  ${({ active }) =>
+    active &&
+    css`
     color: ${({ theme }) =>
       theming({
         theme: theme,
@@ -114,48 +116,48 @@ const MenuLink = styled.a`
         defaultValue: Colors.NeutralLight
       })};
     background: url(${DisclosureIcon}), ${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Primary",
-    defaultValue: Colors.Primary
-  })};
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })};
     background: url(${DisclosureIcon}), -moz-linear-gradient(90deg, ${({
-  theme
-}) =>
-  theming({
-    theme: theme,
-    path: "Colors.Primary",
-    defaultValue: Colors.Primary
-  })} 0%, ${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Secondary",
-    defaultValue: Colors.Secondary
-  })} 100%);
-  background: url(${DisclosureIcon}), -webkit-linear-gradient(90deg, ${({
-  theme
-}) =>
-  theming({
-    theme: theme,
-    path: "Colors.Primary",
-    defaultValue: Colors.Primary
-  })} 0%, ${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Secondary",
-    defaultValue: Colors.Secondary
-  })} 100%);
-  background: url(${DisclosureIcon}), linear-gradient(90deg, ${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Primary",
-    defaultValue: Colors.Primary
-  })} 0%, ${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Secondary",
-    defaultValue: Colors.Secondary
-  })} 100%);
+      theme
+    }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })} 0%, ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })} 100%);
+    background: url(${DisclosureIcon}), -webkit-linear-gradient(90deg, ${({
+      theme
+    }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })} 0%, ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })} 100%);
+    background: url(${DisclosureIcon}), linear-gradient(90deg, ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Primary",
+        defaultValue: Colors.Primary
+      })} 0%, ${({ theme }) =>
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })} 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${({
       theme
     }) =>
@@ -164,15 +166,19 @@ const MenuLink = styled.a`
         path: "Colors.Primary",
         defaultValue: Colors.Primary
       })}",endColorstr="${({ theme }) =>
-  theming({
-    theme: theme,
-    path: "Colors.Secondary",
-    defaultValue: Colors.Secondary
-  })}",GradientType=1);
-  background-size: 10px 16px, auto auto;
-  background-position: 98.5% center;
-  background-repeat: no-repeat;
-  }
+      theming({
+        theme: theme,
+        path: "Colors.Secondary",
+        defaultValue: Colors.Secondary
+      })}",GradientType=1);
+    background-size: 10px 16px, auto auto;
+    background-position: 98.5% center;
+    background-repeat: no-repeat;
+
+    :hover {
+      color: ${Colors.NeutralLight};
+    }
+  `}
 `;
 
 export { Link, MenuLink };
