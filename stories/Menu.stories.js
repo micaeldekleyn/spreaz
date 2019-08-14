@@ -13,26 +13,31 @@ const leftLinks: LeftLink[] = [
     icon: <img src={HomeIcon} alt="Home" width="24" height="19" />,
     iconHover: <img src={HomeIconActive} alt="Home" width="24" height="19" />,
     iconActive: <img src={HomeIconActive} alt="Home" width="24" height="19" />,
-    href: "/"
+    href: "/",
+    active: true
   },
   {
     text: "RB",
-    href: "/groups/1"
+    href: "/groups/1",
+    active: false
   },
   {
     text: "MT",
-    href: "/groups/2"
+    href: "/groups/2",
+    active: false
   }
 ];
 
 const rightLinks = [
   {
     text: "Menu Link",
-    href: "/content/1"
+    href: "/content/1",
+    active: true
   },
   {
     text: "Menu Link",
-    href: "/content/2"
+    href: "/content/2",
+    active: false
   }
 ];
 

@@ -4,7 +4,8 @@ import React, { useState, type Element } from "react";
 import { StyledRoundButton } from "../../atoms/Button";
 
 type Props = {
-  active?: boolean,
+  href: string,
+  active: boolean,
   text?: string,
   icon?: Element<"img">,
   iconHover?: Element<"img">,
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const RoundButton = ({
+  href,
   active,
   text,
   icon,
@@ -27,12 +29,17 @@ const RoundButton = ({
   };
 
   const handleMouseLeave = () => {
-    setCurrentIcon(icon);
+    if (active) {
+      setCurrentIcon(iconActive);
+    } else {
+      setCurrentIcon(icon);
+    }
   };
 
   return (
     <StyledRoundButton
       {...props}
+      active={active}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -45,8 +52,7 @@ RoundButton.defaultProps = {
   text: undefined,
   icon: undefined,
   iconHover: undefined,
-  iconActive: undefined,
-  active: false
+  iconActive: undefined
 };
 
 export default RoundButton;
