@@ -81,6 +81,7 @@ const LeftMenu = ({
             iconHover={link.iconHover}
             iconActive={link.iconActive}
             className="LeftMenu__LeftLink"
+            active={link.active}
           />
         ))}
       </LeftMenuLeftContent>
@@ -92,6 +93,7 @@ const LeftMenu = ({
           <MenuLink
             key={link.text}
             href={link.href}
+            active={link.active}
             className="LeftMenu__RightLink"
           >
             {link.text}

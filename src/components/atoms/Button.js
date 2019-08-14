@@ -315,27 +315,22 @@ export const StyledRoundButton = styled.a`
     }
   }
 
-  :active {
-    color: ${({ theme }) =>
-      theming({
-        theme: theme,
-        path: "Colors.NeutralLight",
-        defaultValue: Colors.NeutralLight
-      })};
-    background: ${({ theme }) =>
-      theming({
-        theme: theme,
-        path: "Colors.Secondary",
-        defaultValue: Colors.Secondary
-      })};
-    :before {
+  ${({ active }) =>
+    active &&
+    css`
+      color: ${({ theme }) =>
+        theming({
+          theme: theme,
+          path: "Colors.NeutralLight",
+          defaultValue: Colors.NeutralLight
+        })};
       background: linear-gradient(
-        90deg,
+        180deg,
         ${({ theme }) =>
             theming({
               theme: theme,
-              path: "Colors.Secondary",
-              defaultValue: Colors.Secondary
+              path: "Colors.Primary",
+              defaultValue: Colors.Primary
             })}
           0%,
         ${({ theme }) =>
@@ -346,8 +341,26 @@ export const StyledRoundButton = styled.a`
             })}
           100%
       );
-    }
-  }
+      :before {
+        background: linear-gradient(
+          180deg,
+          ${({ theme }) =>
+              theming({
+                theme: theme,
+                path: "Colors.Primary",
+                defaultValue: Colors.Primary
+              })}
+            0%,
+          ${({ theme }) =>
+              theming({
+                theme: theme,
+                path: "Colors.Secondary",
+                defaultValue: Colors.Secondary
+              })}
+            100%
+        );
+      }
+    `}
 
   img {
     position: absolute;
