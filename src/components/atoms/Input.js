@@ -88,4 +88,4 @@ Input.defaultProps = {
   error: undefined
 };
 
-export { Input };
+export { Label, Input };
