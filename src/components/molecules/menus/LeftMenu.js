@@ -89,16 +89,20 @@ const LeftMenu = ({
         <Title level="h4" as="h2">
           {rightContentTitle}
         </Title>
-        {rightLinks.map(link => (
-          <MenuLink
-            key={link.text}
-            href={link.href}
-            active={link.active}
-            className="LeftMenu__RightLink"
-          >
-            {link.text}
-          </MenuLink>
-        ))}
+        {rightLinks.map(({ component, ...link }) =>
+          component ? (
+            component
+          ) : (
+            <MenuLink
+              key={link.text}
+              href={link.href}
+              active={link.active}
+              className="LeftMenu__RightLink"
+            >
+              {link.text}
+            </MenuLink>
+          )
+        )}
       </LeftMenuRightContent>
     </LeftMenuContentContainer>
   </StyledLeftMenu>

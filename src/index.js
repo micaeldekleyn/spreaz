@@ -1,7 +1,7 @@
 // @flow
 
 import { SubmitButton, Button } from "./components/atoms/Button";
-import { Link } from "./components/atoms/Link";
+import { Link, MenuLink } from "./components/atoms/Link";
 import { Label, Input } from "./components/atoms/Input";
 import { Row, Col } from "./components/atoms/Layout";
 import { Title } from "./components/atoms/Title";
@@ -16,6 +16,7 @@ export {
   Button,
   RoundButton,
   Link,
+  MenuLink,
   Label,
   Input,
   Row,
