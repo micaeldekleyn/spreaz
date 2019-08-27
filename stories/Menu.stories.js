@@ -7,6 +7,7 @@ import LeftMenu from "../src/components/molecules/menus/LeftMenu";
 import HomeIcon from "./images/icon-home.png";
 import HomeIconActive from "./images/icon-home-active.png";
 import { type LeftLink } from "../src/types/menu/LeftLink";
+import { Button } from "../src/components/atoms/Button";
 
 const leftLinks: LeftLink[] = [
   {
@@ -35,9 +36,7 @@ const rightLinks = [
     active: true
   },
   {
-    text: "Menu Link",
-    href: "/content/2",
-    active: false
+    component: <Button>Link button</Button>
   }
 ];
 
