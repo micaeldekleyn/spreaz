@@ -72,18 +72,22 @@ const LeftMenu = ({
     </LeftMenuHeaderContainer>
     <LeftMenuContentContainer>
       <LeftMenuLeftContent>
-        {leftLinks.map(link => (
-          <RoundButton
-            key={link.href}
-            href={link.href}
-            text={link.text}
-            icon={link.icon}
-            iconHover={link.iconHover}
-            iconActive={link.iconActive}
-            className="LeftMenu__LeftLink"
-            active={link.active}
-          />
-        ))}
+        {leftLinks.map(({ component, ...link }) =>
+          component ? (
+            component
+          ) : (
+            <RoundButton
+              key={link.href}
+              href={link.href}
+              text={link.text}
+              icon={link.icon}
+              iconHover={link.iconHover}
+              iconActive={link.iconActive}
+              className="LeftMenu__LeftLink"
+              active={link.active}
+            />
+          )
+        )}
       </LeftMenuLeftContent>
       <LeftMenuRightContent>
         <Title level="h4" as="h2">
