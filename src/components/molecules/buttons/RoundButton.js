@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useState, type Element } from "react";
+import React, { useState, useEffect, type Element } from "react";
 import { StyledRoundButton } from "../../atoms/Button";
 
 type Props = {
@@ -23,8 +23,15 @@ const RoundButton = ({
 }: Props) => {
   const [currentIcon, setCurrentIcon] = useState(active ? iconActive : icon);
 
+  useEffect(() => {
+    if (active) {
+      setCurrentIcon(iconActive);
+    } else {
+      setCurrentIcon(icon);
+    }
+  }, [active, iconActive, icon]);
+
   const handleMouseEnter = () => {
-    // console.log(currentIcon);
     setCurrentIcon(iconHover);
   };
 

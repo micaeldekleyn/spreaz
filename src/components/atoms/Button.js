@@ -315,8 +315,8 @@ export const StyledRoundButton = styled.a`
     }
   }
 
-  ${({ active }) =>
-    active &&
+  ${props =>
+    props.active &&
     css`
       color: ${({ theme }) =>
         theming({
