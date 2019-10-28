@@ -8,6 +8,8 @@ import { Row, Col } from "../src/components/atoms/Layout";
 import { Button, SubmitButton } from "../src/components/atoms/Button";
 import RoundButton from "../src/components/molecules/buttons/RoundButton";
 
+const active = true;
+
 storiesOf("Buttons", module).add("All", () => (
   <div>
     <Row style={{ marginTop: "16px" }}>
@@ -41,7 +43,7 @@ storiesOf("Buttons", module).add("All", () => (
       </Col>
     </Row>
     <Row style={{ marginTop: "16px" }}>
-      <RoundButton href="/" text="TT" />
+      <RoundButton href="/" text="TT" active={active} />
     </Row>
   </div>
 ));
