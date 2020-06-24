@@ -7,7 +7,7 @@ import {
   LeftMenuHeaderContainer,
   LeftMenuContentContainer,
   LeftMenuLeftContent,
-  LeftMenuRightContent
+  LeftMenuRightContent,
 } from "../../atoms/Container";
 import RoundButton from "../buttons/RoundButton";
 import { Title } from "../../atoms/Title";
@@ -17,10 +17,11 @@ import { theming } from "../../../utils/theming";
 import { type LeftLink } from "../../../types/menu/LeftLink";
 
 type Props = {
-  appName: string,
+  logo?: string,
+  appName?: string,
   leftLinks: LeftLink[],
   rightContentTitle: string,
-  rightLinks: Object[]
+  rightLinks: Object[],
 };
 
 const StyledLeftMenu = styled.nav`
@@ -30,12 +31,14 @@ const StyledLeftMenu = styled.nav`
     }
 
     &__AppNameLink {
+      display: flex;
+      justify-content: flex-start;
       text-decoration: none;
       color: ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.Primary",
-          defaultValue: Colors.Primary
+          defaultValue: Colors.Primary,
         })};
 
       &:hover {
@@ -43,9 +46,15 @@ const StyledLeftMenu = styled.nav`
           theming({
             theme: theme,
             path: "Colors.Secondary",
-            defaultValue: Colors.Secondary
+            defaultValue: Colors.Secondary,
           })};
       }
+    }
+
+    &__AppLogo {
+      width: auto;
+      height: 28px;
+      margin-right: 8px;
     }
 
     &__LeftLink,
@@ -56,6 +65,7 @@ const StyledLeftMenu = styled.nav`
 `;
 
 const LeftMenu = ({
+  logo,
   appName,
   leftLinks,
   rightContentTitle,
@@ -66,7 +76,10 @@ const LeftMenu = ({
     <LeftMenuHeaderContainer className="LeftMenu__HeaderContainer">
       <Title level="h2" as="h1">
         <a href="/" className="LeftMenu__AppNameLink">
-          {appName}
+          {logo && (
+            <img src={logo} alt={appName} className="LeftMenu__AppLogo" />
+          )}
+          {appName && <span>{appName}</span>}
         </a>
       </Title>
     </LeftMenuHeaderContainer>
@@ -111,5 +124,10 @@ const LeftMenu = ({
     </LeftMenuContentContainer>
   </StyledLeftMenu>
 );
+
+LeftMenu.defaultProps = {
+  logo: undefined,
+  appName: undefined,
+};
 
 export default LeftMenu;

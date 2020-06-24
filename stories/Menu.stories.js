@@ -15,33 +15,34 @@ const leftLinks: LeftLink[] = [
     iconHover: <img src={HomeIconActive} alt="Home" width="24" height="19" />,
     iconActive: <img src={HomeIconActive} alt="Home" width="24" height="19" />,
     href: "/",
-    active: true
+    active: true,
   },
   {
     text: "RB",
     href: "/groups/1",
-    active: false
+    active: false,
   },
   {
     text: "MT",
     href: "/groups/2",
-    active: false
-  }
+    active: false,
+  },
 ];
 
 const rightLinks = [
   {
     text: "Menu Link",
     href: "/content/1",
-    active: true
+    active: true,
   },
   {
-    component: <Button>Link button</Button>
-  }
+    component: <Button>Link button</Button>,
+  },
 ];
 
 storiesOf("Menu", module).add("Left Menu", () => (
   <LeftMenu
+    logo={HomeIcon}
     appName="Spreaz"
     leftLinks={leftLinks}
     rightContentTitle="Home"
