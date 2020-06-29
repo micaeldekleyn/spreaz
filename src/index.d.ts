@@ -54,7 +54,7 @@ export interface LeftMenuInterface {
   leftLinks: LeftLink[];
   rightContentTitle: string;
   rightLinks: object[];
-  headerButtons?: Element[];
+  headerButtons?: React.Element[];
 }
 
 export declare const LeftMenu: React.ComponentType<LeftMenuInterface>;

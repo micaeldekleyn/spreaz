@@ -61,7 +61,7 @@ const StyledLeftMenu = styled.nav`
     }
 
     &__HeaderButtonsContainer {
-      justify-self: flex-end;
+      margin-left: auto;
     }
 
     &__LeftLink,
