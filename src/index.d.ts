@@ -49,10 +49,12 @@ export interface LeftLink {
 
 export interface LeftMenuInterface {
   logo?: string;
+  logoHeight?: number;
   appName?: string;
   leftLinks: LeftLink[];
   rightContentTitle: string;
   rightLinks: object[];
+  headerButtons: Element[];
 }
 
 export declare const LeftMenu: React.ComponentType<LeftMenuInterface>;

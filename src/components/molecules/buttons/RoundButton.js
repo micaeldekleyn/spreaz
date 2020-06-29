@@ -25,19 +25,19 @@ const RoundButton = ({
 
   useEffect(() => {
     if (active) {
-      setCurrentIcon(iconActive);
+      setCurrentIcon(iconActive ? iconActive : icon);
     } else {
       setCurrentIcon(icon);
     }
   }, [active, iconActive, icon]);
 
   const handleMouseEnter = () => {
-    setCurrentIcon(iconHover);
+    setCurrentIcon(iconHover ? iconHover : icon);
   };
 
   const handleMouseLeave = () => {
     if (active) {
-      setCurrentIcon(iconActive);
+      setCurrentIcon(iconActive ? iconActive : icon);
     } else {
       setCurrentIcon(icon);
     }

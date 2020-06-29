@@ -7,7 +7,7 @@ import {
   LeftMenuHeaderContainer,
   LeftMenuContentContainer,
   LeftMenuLeftContent,
-  LeftMenuRightContent,
+  LeftMenuRightContent
 } from "../../atoms/Container";
 import RoundButton from "../buttons/RoundButton";
 import { Title } from "../../atoms/Title";
@@ -18,10 +18,12 @@ import { type LeftLink } from "../../../types/menu/LeftLink";
 
 type Props = {
   logo?: string,
+  logoHeight?: number,
   appName?: string,
   leftLinks: LeftLink[],
   rightContentTitle: string,
   rightLinks: Object[],
+  headerButtons?: React.Element[]
 };
 
 const StyledLeftMenu = styled.nav`
@@ -33,12 +35,13 @@ const StyledLeftMenu = styled.nav`
     &__AppNameLink {
       display: flex;
       justify-content: flex-start;
+      align-items: center;
       text-decoration: none;
       color: ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.Primary",
-          defaultValue: Colors.Primary,
+          defaultValue: Colors.Primary
         })};
 
       &:hover {
@@ -46,15 +49,19 @@ const StyledLeftMenu = styled.nav`
           theming({
             theme: theme,
             path: "Colors.Secondary",
-            defaultValue: Colors.Secondary,
+            defaultValue: Colors.Secondary
           })};
       }
     }
 
     &__AppLogo {
       width: auto;
-      height: 28px;
+      height: ${({ logoHeight }) => (logoHeight ? logoHeight : 28)}px;
       margin-right: 8px;
+    }
+
+    &__HeaderButtonsContainer {
+      justify-self: flex-end;
     }
 
     &__LeftLink,
@@ -70,6 +77,7 @@ const LeftMenu = ({
   leftLinks,
   rightContentTitle,
   rightLinks,
+  headerButtons,
   ...props
 }: Props) => (
   <StyledLeftMenu {...props} as={LeftMenuContainer}>
@@ -82,6 +90,11 @@ const LeftMenu = ({
           {appName && <span>{appName}</span>}
         </a>
       </Title>
+      {headerButtons && (
+        <div className="LeftMenu__HeaderButtonsContainer">
+          {headerButtons.map(button => button)}
+        </div>
+      )}
     </LeftMenuHeaderContainer>
     <LeftMenuContentContainer>
       <LeftMenuLeftContent>
@@ -127,7 +140,9 @@ const LeftMenu = ({
 
 LeftMenu.defaultProps = {
   logo: undefined,
+  logoHeight: undefined,
   appName: undefined,
+  headerButtons: undefined
 };
 
 export default LeftMenu;
