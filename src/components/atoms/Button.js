@@ -13,26 +13,26 @@ const StyledButton = styled.button`
     theming({
       theme: theme,
       path: "FontFamilies.Primary",
-      defaultValue: FontFamilies.Primary,
+      defaultValue: FontFamilies.Primary
     })};
   font-size: ${({ theme }) =>
     theming({
       theme: theme,
       path: "FontSizes.button",
-      defaultValue: FontSizes.button,
+      defaultValue: FontSizes.button
     })};
   font-weight: bold;
   line-height: ${({ theme }) =>
     theming({
       theme: theme,
       path: "LineHeights.button",
-      defaultValue: LineHeights.button,
+      defaultValue: LineHeights.button
     })};
   color: ${({ theme }) =>
     theming({
       theme: theme,
       path: "Colors.NeutralLight",
-      defaultValue: Colors.NeutralLight,
+      defaultValue: Colors.NeutralLight
     })};
   text-align: center;
   text-transform: uppercase;
@@ -41,53 +41,53 @@ const StyledButton = styled.button`
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })};
   background: -moz-linear-gradient(90deg, ${({ theme }) =>
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })} 0%, ${({ theme }) =>
   theming({
     theme: theme,
     path: "Colors.Secondary",
-    defaultValue: Colors.Secondary,
+    defaultValue: Colors.Secondary
   })} 100%);
   background: -webkit-linear-gradient(90deg, ${({ theme }) =>
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })} 0%, ${({ theme }) =>
   theming({
     theme: theme,
     path: "Colors.Secondary",
-    defaultValue: Colors.Secondary,
+    defaultValue: Colors.Secondary
   })} 100%);
   background: linear-gradient(90deg, ${({ theme }) =>
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })} 0%, ${({ theme }) =>
   theming({
     theme: theme,
     path: "Colors.Secondary",
-    defaultValue: Colors.Secondary,
+    defaultValue: Colors.Secondary
   })} 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${({
-    theme,
+    theme
   }) =>
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })}",endColorstr="${({ theme }) =>
   theming({
     theme: theme,
     path: "Colors.Secondary",
-    defaultValue: Colors.Secondary,
+    defaultValue: Colors.Secondary
   })}",GradientType=1);
   cursor: pointer;
   outline: none;
@@ -103,13 +103,13 @@ const StyledButton = styled.button`
         theming({
           theme: theme,
           path: "Colors.Primary",
-          defaultValue: Colors.Primary,
+          defaultValue: Colors.Primary
         })};
       background: ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.NeutralLight",
-          defaultValue: Colors.NeutralLight,
+          defaultValue: Colors.NeutralLight
         })};
       margin: 1px;
       /* border: 1px solid ${Colors.Primary}; */
@@ -125,12 +125,12 @@ const StyledButton = styled.button`
           theming({
             theme: theme,
             path: "Colors.Primary",
-            defaultValue: Colors.Primary,
+            defaultValue: Colors.Primary
           })} 0%, ${({ theme }) =>
       theming({
         theme: theme,
         path: "Colors.Secondary",
-        defaultValue: Colors.Secondary,
+        defaultValue: Colors.Secondary
       })} 100%);
       }
     `}
@@ -146,13 +146,13 @@ const StyledButton = styled.button`
       theming({
         theme: theme,
         path: "Colors.NeutralLight",
-        defaultValue: Colors.NeutralLight,
+        defaultValue: Colors.NeutralLight
       })};
     background: ${({ theme }) =>
       theming({
         theme: theme,
         path: "Colors.Primary",
-        defaultValue: Colors.Primary,
+        defaultValue: Colors.Primary
       })};
     :before {
       background: linear-gradient(
@@ -161,13 +161,13 @@ const StyledButton = styled.button`
           theming({
             theme: theme,
             path: "Colors.Primary",
-            defaultValue: Colors.Primary,
+            defaultValue: Colors.Primary
           })} 0%,
       ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.Primary",
-          defaultValue: Colors.Primary,
+          defaultValue: Colors.Primary
         })} 100%
       );
     }
@@ -178,13 +178,13 @@ const StyledButton = styled.button`
       theming({
         theme: theme,
         path: "Colors.NeutralLight",
-        defaultValue: Colors.NeutralLight,
+        defaultValue: Colors.NeutralLight
       })};
     background: ${({ theme }) =>
       theming({
         theme: theme,
         path: "Colors.Secondary",
-        defaultValue: Colors.Secondary,
+        defaultValue: Colors.Secondary
       })};
     :before {
       background: linear-gradient(
@@ -193,13 +193,13 @@ const StyledButton = styled.button`
           theming({
             theme: theme,
             path: "Colors.Secondary",
-            defaultValue: Colors.Secondary,
+            defaultValue: Colors.Secondary
           })} 0%,
       ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.Secondary",
-          defaultValue: Colors.Secondary,
+          defaultValue: Colors.Secondary
         })} 100%
       );
     }
@@ -216,7 +216,9 @@ export const Button = (props: Object) => {
 
 export const StyledRoundButton = styled.a`
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 22px;
@@ -224,13 +226,13 @@ export const StyledRoundButton = styled.a`
     theming({
       theme: theme,
       path: "Colors.Primary",
-      defaultValue: Colors.Primary,
+      defaultValue: Colors.Primary
     })};
   background: ${({ theme }) =>
     theming({
       theme: theme,
       path: "Colors.NeutralLight",
-      defaultValue: Colors.NeutralLight,
+      defaultValue: Colors.NeutralLight
     })};
   margin: 1px;
   text-align: center;
@@ -240,13 +242,13 @@ export const StyledRoundButton = styled.a`
     theming({
       theme: theme,
       path: "FontFamilies.Primary",
-      defaultValue: FontFamilies.Primary,
+      defaultValue: FontFamilies.Primary
     })};
   font-size: ${({ theme }) =>
     theming({
       theme: theme,
       path: "FontSizes.button",
-      defaultValue: FontSizes.button,
+      defaultValue: FontSizes.button
     })};
   font-weight: bold;
   line-height: 42px;
@@ -268,14 +270,14 @@ export const StyledRoundButton = styled.a`
           theming({
             theme: theme,
             path: "Colors.Primary",
-            defaultValue: Colors.Primary,
+            defaultValue: Colors.Primary
           })}
         0%,
       ${({ theme }) =>
           theming({
             theme: theme,
             path: "Colors.Secondary",
-            defaultValue: Colors.Secondary,
+            defaultValue: Colors.Secondary
           })}
         100%
     );
@@ -286,13 +288,13 @@ export const StyledRoundButton = styled.a`
       theming({
         theme: theme,
         path: "Colors.NeutralLight",
-        defaultValue: Colors.NeutralLight,
+        defaultValue: Colors.NeutralLight
       })};
     background: ${({ theme }) =>
       theming({
         theme: theme,
         path: "Colors.Primary",
-        defaultValue: Colors.Primary,
+        defaultValue: Colors.Primary
       })};
     :before {
       background: linear-gradient(
@@ -301,28 +303,28 @@ export const StyledRoundButton = styled.a`
             theming({
               theme: theme,
               path: "Colors.Primary",
-              defaultValue: Colors.Primary,
+              defaultValue: Colors.Primary
             })}
           0%,
         ${({ theme }) =>
             theming({
               theme: theme,
               path: "Colors.Primary",
-              defaultValue: Colors.Primary,
+              defaultValue: Colors.Primary
             })}
           100%
       );
     }
   }
 
-  ${(props) =>
+  ${props =>
     props.active &&
     css`
       color: ${({ theme }) =>
         theming({
           theme: theme,
           path: "Colors.NeutralLight",
-          defaultValue: Colors.NeutralLight,
+          defaultValue: Colors.NeutralLight
         })};
       background: linear-gradient(
         180deg,
@@ -330,14 +332,14 @@ export const StyledRoundButton = styled.a`
             theming({
               theme: theme,
               path: "Colors.Primary",
-              defaultValue: Colors.Primary,
+              defaultValue: Colors.Primary
             })}
           0%,
         ${({ theme }) =>
             theming({
               theme: theme,
               path: "Colors.Secondary",
-              defaultValue: Colors.Secondary,
+              defaultValue: Colors.Secondary
             })}
           100%
       );
@@ -348,14 +350,14 @@ export const StyledRoundButton = styled.a`
               theming({
                 theme: theme,
                 path: "Colors.Primary",
-                defaultValue: Colors.Primary,
+                defaultValue: Colors.Primary
               })}
             0%,
           ${({ theme }) =>
               theming({
                 theme: theme,
                 path: "Colors.Secondary",
-                defaultValue: Colors.Secondary,
+                defaultValue: Colors.Secondary
               })}
             100%
         );
