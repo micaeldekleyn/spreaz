@@ -5,7 +5,7 @@ export interface ButtonInterface {
   round?: boolean;
 }
 
-export declare const Button: React.ComponentType<ButtonInterface>;
+export declare const Button: React.ComponentType<ButtonInterface, React.Component>;
 
 /*
   RoundButton component
@@ -23,6 +23,15 @@ export interface RoundButtonInterface<T> {
 export declare const RoundButton: React.ComponentType<RoundButtonInterface>;
 
 /*
+  SubmitButton component
+*/
+export interface SubmitButtonInterface {
+  round?: boolean;
+}
+
+export declare const SubmitButton: React.ComponentType<SubmitButtonInterface, React.Component>;
+
+/*
   Title component
 */
 export type TitleLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -32,7 +41,27 @@ export interface TitleInterface extends Component {
   centered?: boolean;
 }
 
-export declare const Title: React.ComponentType<TitleInterface>;
+export declare const Title: React.ComponentType<TitleInterface, React.Component>;
+
+/*
+  Link component
+*/
+export interface LinkInterface extends Component {
+  cancel?: boolean;
+}
+
+export declare const Link: React.ComponentType<LinkInterface, React.Component>;
+
+/*
+  Text component
+*/
+export interface TextInterface extends Component {
+  level?: "normal" | "medium" | "small";
+  centered?: boolean;
+  bold?: boolean;
+}
+
+export declare const Text: React.ComponentType<TextInterface, React.Component>;
 
 /*
   LeftMenu component
@@ -81,6 +110,41 @@ export interface MenuLinkInterface<T> {
 }
 
 export declare const MenuLink: React.ComponentType<MenuLinkInterface>;
+
+/*
+  Row component
+*/
+
+export interface RowInterface<T> extends React.HTMLAttributes {
+  outterMargin?: boolean;
+  fullHeight?: boolean;
+  as?: T;
+}
+
+export declare const Row: React.ComponentType<RowInterface>;
+
+/*
+  Col component
+*/
+
+export interface ColInterface {
+  span: number;
+}
+
+export declare const Col: React.ComponentType<ColInterface, React.Component>;
+
+/*
+  Input component
+*/
+
+export interface InputInterface {
+  id: string;
+  className?: string;
+  label: string;
+  error?: string;
+}
+
+export declare const Input: React.ComponentType<InputInterface, React.Component>;
 
 /*
   Spreaz Declaration

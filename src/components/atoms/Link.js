@@ -66,7 +66,7 @@ const Link = styled.a`
 
 const MenuLink = styled.a`
   display: block;
-  padding: 18px 0 18px 8px;
+  padding: 12px 0 12px 8px;
   font-family: ${({ theme }) =>
     theming({
       theme: theme,
